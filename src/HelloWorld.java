@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 
@@ -52,10 +53,10 @@ public class HelloWorld {
         System.out.println(astroName.substring(6,11));
         System.out.println(astroName.substring(6,12));
 
-        String[] name = astroName.split(" ");
-
-        System.out.println(name[1] + " " + name[0]);
-        System.out.println(name[1]);
+//        String[] name = astroName.split(" ");
+//
+//        System.out.println(name[1] + " " + name[0]);
+//        System.out.println(name[1]);
 
 //        OR
 
@@ -66,5 +67,10 @@ public class HelloWorld {
 //        String result = new StringBuffer(s).reverse().toString();
 //        System.out.println(result);
 
+//  ----------------- Arrays ------------------------
+
+        String[] name = new String[1];
+        name[0] = astroName;
+        System.out.println(Arrays.toString(name));
     }
 }
