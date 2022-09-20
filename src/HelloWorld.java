@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Scanner;
 
 public class HelloWorld {
 
@@ -76,7 +77,7 @@ public class HelloWorld {
         int[] numbers = {2,4,1,3,5,};
         System.out.println(numbers.length);
         Arrays.sort(numbers);
-        System.out.println(Arrays.toString(numbers));
+//        System.out.println(Arrays.toString(numbers));
 
 
 
@@ -88,9 +89,13 @@ public class HelloWorld {
         }
 
         for(String language : languages ){
-            System.out.println(language);
+//            System.out.println(language);
         }
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("What is your name?:");
+        String myNames = scanner.nextLine().trim();
+        System.out.println("Hi " + myNames + " nice to meet you!");
 
 
 
