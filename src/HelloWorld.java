@@ -79,5 +79,20 @@ public class HelloWorld {
         System.out.println(Arrays.toString(numbers));
 
 
+
+        String[] languages = {"html", "css", "javascript", "java" };
+//        System.out.println(Arrays.toString(languages));
+
+        for(int i = 0; i < languages.length; i += 1){
+//            System.out.println(languages[i]);
+        }
+
+        for(String language : languages ){
+            System.out.println(language);
+        }
+
+
+
+
     }
 }
