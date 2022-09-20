@@ -45,13 +45,13 @@ public class HelloWorld {
 //                  OR
 //        System.out.println(astroName.length());
 
-        System.out.println(astroName.toLowerCase());
-        System.out.println(astroName.toUpperCase());
-        System.out.println(astroName.indexOf("Z"));
-        System.out.println(astroName.indexOf("e"));
-//        System.out.println(astroName.charAt(6));
-        System.out.println(astroName.substring(6,11));
-        System.out.println(astroName.substring(6,12));
+//        System.out.println(astroName.toLowerCase());
+//        System.out.println(astroName.toUpperCase());
+//        System.out.println(astroName.indexOf("Z"));
+//        System.out.println(astroName.indexOf("e"));
+////        System.out.println(astroName.charAt(6));
+//        System.out.println(astroName.substring(6,11));
+//        System.out.println(astroName.substring(6,12));
 
 //        String[] name = astroName.split(" ");
 //
@@ -69,8 +69,15 @@ public class HelloWorld {
 
 //  ----------------- Arrays ------------------------
 
-        String[] name = new String[1];
+        String[] name = new String[3];
         name[0] = astroName;
-        System.out.println(Arrays.toString(name));
+//        System.out.println(Arrays.toString(name));
+
+        int[] numbers = {2,4,1,3,5,};
+        System.out.println(numbers.length);
+        Arrays.sort(numbers);
+        System.out.println(Arrays.toString(numbers));
+
+
     }
 }
