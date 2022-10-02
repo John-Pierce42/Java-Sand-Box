@@ -106,5 +106,8 @@ public class HelloWorld {
 //        Arrays.toString(planets);
         System.out.println(Arrays.toString(planets));
 
+
+            for(String planet:planets){
+                System.out.println(planet);            }
     }
 }
