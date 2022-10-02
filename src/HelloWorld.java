@@ -92,12 +92,19 @@ public class HelloWorld {
 //            System.out.println(language);
         }
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("What is your name?:");
-        String myNames = scanner.nextLine().trim();
-        System.out.println("Hi " + myNames + " nice to meet you!");
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("What is your name?:");
+//        String myNames = scanner.nextLine().trim();
+//        System.out.println("Hi " + myNames + " nice to meet you!");
 
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("what is your name?: ");
+//        String names = scanner.nextLine().trim();
+//        System.out.println("Hi " + names + " Nice to meet you.");
 
+        String[] planets = {"Saturn", "Jupiter", "Mars", "Neptune", "Uranus", "Mercury", "Venus", "Earth"};
+//        Arrays.toString(planets);
+        System.out.println(Arrays.toString(planets));
 
     }
 }
