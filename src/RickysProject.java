@@ -5,49 +5,45 @@ import java.util.Scanner;
 
 public class RickysProject {
 
-    public static void main(String[] args){
-
-
-        System.out.println("\r");
-        System.out.print("Hello, I'm your AI assitant for today. May I please have your name?:\r");
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.next();
+        
+        // Get user's name
+        System.out.print("Hello, I'm your AI assistant for today. May I please have your name? ");
+        String name = scanner.nextLine();
+        
+        System.out.println("Nice to meet you, " + name + "!");
 
-        System.out.println("Nice to meet you " + name + "!\r");
-
-        System.out.print("May I ask what your favorite color is " + name + "?:\r");
-        String colorPick = scanner.next();
-
-
-        //	Now try to use a while loop to keep asking user while the input is not a color.
-
-        String[] colorsArray = new String[] {"Blue","Green","Red","Pink","Yellow","Orange","White","Cyan","Lime","Maroon","Turquoise","Magenta","Aquamarine","Violet","Tan","Amber"};
+        // List of possible colors
+        String[] colorsArray = new String[] {"blue", "green", "red", "pink", "yellow", "orange", "white", "cyan", "lime", "maroon", "turquoise", "magenta", "aquamarine", "violet", "tan", "amber"};
         List<String> colorsList = new ArrayList<>(Arrays.asList(colorsArray));
-//	System.out.println(colorsList.contains("Green"));
 
-        if(colorsList.contains(colorPick)){
-
-            System.out.println("Thats awesome " + name + "! " + colorPick + " is my favorite color too!\r");
-        } else {
-            System.out.println(colorPick + " is not a color silly..\r");
+        // Ask user's favorite color and validate it
+        String colorPick;
+        while (true) {
+            System.out.print("May I ask what your favorite color is, " + name + "? ");
+            colorPick = scanner.nextLine().toLowerCase();
+            
+            if (colorsList.contains(colorPick)) {
+                System.out.println("That's awesome, " + name + "! " + colorPick + " is my favorite color too!");
+                break;
+            } else {
+                System.out.println(colorPick + " is not a valid color. Please try again.");
+            }
         }
 
-        System.out.print("Can we be bestfriends?:\r");
-        String answer = scanner.next();
+        // Ask to be best friends
+        System.out.print("Can we be best friends? ");
+        String answer = scanner.nextLine();
 
-        if(answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("sure") || answer.equalsIgnoreCase("ok") ||
-                answer.equalsIgnoreCase("si") || answer.equalsIgnoreCase("yeah") || answer.equalsIgnoreCase("yep")
-//			|| answer.equalsIgnoreCase("you got it")
-        ){
-
-            System.out.print("Yaaay! thank you " + name + "! Best friends forever. let go to the Metaverse together!");
+        if (answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("sure") || answer.equalsIgnoreCase("ok") || answer.equalsIgnoreCase("yeah") || answer.equalsIgnoreCase("yep")) {
+            System.out.println("Yay! Thank you, " + name + "! Best friends forever. Let's go to the Metaverse together!");
         } else {
-            System.out.print("Aww man, I really liked you.. Well, it was nice to meet " + name + ". see you later!");
+            System.out.println("Aww man, I really liked you. Well, it was nice to meet you, " + name + ". See you later!");
         }
 
-
+        scanner.close(); // Close the scanner to avoid memory leaks
     }
-
-
 }
+
